@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    tools:context=".ui.fragments.AddOrder">
+
+    <EditText
+        android:id="@+id/etCustomerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@android:color/transparent"
+        android:minHeight="48dp"
+        android:hint="Please enter your name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etOrderId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter your order id:"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/etCustomerName"
+        app:layout_constraintStart_toStartOf="@+id/etCustomerName"
+        app:layout_constraintTop_toBottomOf="@+id/etCustomerName" />
+
+    <EditText
+        android:id="@+id/etOrderDetails"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:gravity="start|top"
+        android:paddingTop="8dp"
+        android:hint="Order details"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/etCustomerName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etCustomerName"
+        app:layout_constraintTop_toBottomOf="@+id/etOrderId" />
+</androidx.constraintlayout.widget.ConstraintLayout>

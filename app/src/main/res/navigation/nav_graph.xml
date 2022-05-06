@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ordersFragment">
+
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.adithyaegc.ordermanagementsystem.ui.fragments.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_orders">
+        <action
+            android:id="@+id/action_ordersFragment_to_addOrder"
+            app:destination="@id/addOrder"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_ordersFragment_to_updateOrder"
+            app:destination="@id/updateOrder"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/addOrder"
+        android:name="com.adithyaegc.ordermanagementsystem.ui.fragments.AddOrder"
+        android:label="Add Order"
+        tools:layout="@layout/fragment_add_order">
+        <action
+            android:id="@+id/action_addOrder_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateOrder"
+        android:name="com.adithyaegc.ordermanagementsystem.ui.fragments.UpdateOrder"
+        android:label="Update Order"
+        tools:layout="@layout/fragment_update_order">
+        <action
+            android:id="@+id/action_updateOrder_to_ordersFragment"
+            app:destination="@id/ordersFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <argument
+            android:name="orderItem"
+            app:argType="com.adithyaegc.ordermanagementsystem.data.entity.Order" />
+    </fragment>
+</navigation>
