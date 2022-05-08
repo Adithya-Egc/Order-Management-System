@@ -1,6 +1,5 @@
 # Order-Management-System
 
-I completed the task based on your requirement sir,
 
 Here I use some android jetpack libraries in this project
 
